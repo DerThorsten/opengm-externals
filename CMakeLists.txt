@@ -6,5 +6,5 @@ add_subdirectory(ibfs) # PATCH DISABLED SO FAR FIXME!!!!
 add_subdirectory(maxflow)
 add_subdirectory(mrf)
 #add_subdirectory(gco) PATCHH DOES NOT WORK FIXME!!!!
-add_subdirectory(conicbundle)
-add_subdirectory(daoopt)
+add_subdirectory(conicbundle) # INSTALL OF INCLUDES IS ROTTEN!!!!
+add_subdirectory(daoopt)  # INSTALL OF INCLUDES IS MISSING!!!!
