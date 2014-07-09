@@ -13,6 +13,8 @@ option(WITH_CONICBUNDLE     "DOWNLOAD AND BUILD CONICBUNDLEO" ON)
 option(WITH_DAOOPT          "DOWNLOAD AND BUILD DAOOPT"       ON)
 option(WITH_LIBDAI          "DOWNLOAD AND BUILD LIBDAI"       OFF)
 option(WITH_MPLP            "DOWNLOAD AND BUILD MPLP"         ON)
+option(WITH_FASTPD          "DOWNLOAD AND BUILD FASTPD"       OFF)
+
 
 if(WITH_QPBO)
     add_subdirectory(qpbo)
@@ -27,7 +29,7 @@ if(WITH_TRWS)
 endif()
 
 if(WITH_IBFS)
-    add_subdirectory(ibfs) # PATCH DISABLED SO FAR FIXME!!!!
+    add_subdirectory(ibfs) 
 endif()
 
 if(WITH_MAXFLOW)
@@ -39,15 +41,15 @@ if(WITH_MRF)
 endif()
 
 if(WITH_GCO)
-    add_subdirectory(gco) # PATCHH DOES NOT WORK FIXME!!!!
+    add_subdirectory(gco) 
 endif()
 
 if(WITH_CONICBUNDLE)
-    add_subdirectory(conicbundle) # INSTALL OF INCLUDES IS ROTTEN!!!!
+    add_subdirectory(conicbundle)
 endif()
 
 if(WITH_DAOOPT)
-    add_subdirectory(daoopt)  # INSTALL OF INCLUDES IS MISSING!!!!
+    add_subdirectory(daoopt)  
 endif()
 
 if(WITH_LIBDAI)
@@ -58,4 +60,9 @@ endif()
 
 if(WITH_MPLP)
     add_subdirectory(mplp)  
+endif()
+
+
+if(WITH_FASTPD)
+    add_subdirectory(fastpd)   # patch is not working
 endif()
