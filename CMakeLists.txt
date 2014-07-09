@@ -12,7 +12,7 @@ option(WITH_GCO             "DOWNLOAD AND BUILD GCO"          ON)
 option(WITH_CONICBUNDLE     "DOWNLOAD AND BUILD CONICBUNDLEO" ON)
 option(WITH_DAOOPT          "DOWNLOAD AND BUILD DAOOPT"       ON)
 option(WITH_LIBDAI          "DOWNLOAD AND BUILD LIBDAI"       OFF)
-
+option(WITH_MPLP            "DOWNLOAD AND BUILD MPLP"         ON)
 
 if(WITH_QPBO)
     add_subdirectory(qpbo)
@@ -56,4 +56,6 @@ if(WITH_LIBDAI)
     add_subdirectory(libdai)  
 endif()
 
-
+if(WITH_MPLP)
+    add_subdirectory(mplp)  
+endif()
