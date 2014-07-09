@@ -8,7 +8,7 @@ option(WITH_AD3             "DOWNLOAD AND BUILD AD3"          ON)
 option(WITH_TRWS            "DOWNLOAD AND BUILD TRWS"         ON)
 option(WITH_IBFS            "DOWNLOAD AND BUILD IBFS"         ON)
 option(WITH_MAXFLOW         "DOWNLOAD AND BUILD MAXFLOW"      ON)
-option(WITH_GCO             "DOWNLOAD AND BUILD GCO"          OFF)
+option(WITH_GCO             "DOWNLOAD AND BUILD GCO"          ON)
 option(WITH_CONICBUNDLE     "DOWNLOAD AND BUILD CONICBUNDLEO" ON)
 option(WITH_DAOOPT          "DOWNLOAD AND BUILD DAOOPT"       ON)
 option(WITH_LIBDAI          "DOWNLOAD AND BUILD LIBDAI"       OFF)
@@ -53,7 +53,7 @@ endif()
 if(WITH_LIBDAI)
     find_package(GMP REQUIRED) 
     find_package(GMPXX REQUIRED) 
-    add_subdirectory(libdai)  # INSTALL OF INCLUDES IS MISSING!!!!
+    add_subdirectory(libdai)  
 endif()
 
 
