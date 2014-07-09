@@ -15,7 +15,7 @@ add_definitions(-DFASTPDLABELVALUE=${FASTPD_LABEL_VALUE})
 externalproject_add( fastpd
     URL ${FASTPD_URL}
     PATCH_COMMAND patch 
-        -s -d ${PROJECT_BINARY_DIR}/fastpd/fastpd-prefix/src/fastpd -p1 < ${PROJECT_SOURCE_DIR}/fastpd/files/FastPD.patch -N -r -
+        -s -d ${PROJECT_BINARY_DIR}/fastpd/fastpd-prefix/src/fastpd/ -p6 < ${PROJECT_SOURCE_DIR}/fastpd/files/FastPD.patch -N -r -
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX} 
 )
 

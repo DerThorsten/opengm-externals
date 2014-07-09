@@ -64,5 +64,8 @@ endif()
 
 
 if(WITH_FASTPD)
+	if(NOT FASTPD_URL)
+		message(  SEND_ERROR "FASTPD_URL is empty, needs a valid download url to be stored in CMakeVariable FASTPD_URL\n(Registration required at http://www.csd.uoc.gr/~komod/FastPD/)")
+	endif()
     add_subdirectory(fastpd)   # patch is not working
 endif()
