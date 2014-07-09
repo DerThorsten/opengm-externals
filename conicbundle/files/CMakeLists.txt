@@ -65,16 +65,6 @@ install (TARGETS opengm-external-conicbundle DESTINATION lib/opengm/externals/)
 install (TARGETS opengm-external-conicbundle-shared DESTINATION lib/opengm/externals/)
 
 
-#install(DIRECTORY ""
-#    DESTINATION include/opengm/externals/conicbundle
-#    FILES_MATCHING
-#    PATTERN "*.h"
-#    PATTERN ".svn" EXCLUDE
-#)
-
-
-
-
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/CBsources
     DESTINATION include/opengm/externals/conicbundle/
     FILES_MATCHING
