@@ -14,7 +14,7 @@ option(WITH_DAOOPT          "DOWNLOAD AND BUILD DAOOPT"       ON)
 option(WITH_LIBDAI          "DOWNLOAD AND BUILD LIBDAI"       OFF)
 option(WITH_MPLP            "DOWNLOAD AND BUILD MPLP"         ON)
 option(WITH_FASTPD          "DOWNLOAD AND BUILD FASTPD"       OFF)
-
+option(WITH_GRANTE          "DOWNLOAD AND BUILD GRANTE"       OFF)
 
 if(WITH_QPBO)
     add_subdirectory(qpbo)
@@ -64,8 +64,14 @@ endif()
 
 
 if(WITH_FASTPD)
-	if(NOT FASTPD_URL)
-		message(  SEND_ERROR "FASTPD_URL is empty, needs a valid download url to be stored in CMakeVariable FASTPD_URL\n(Registration required at http://www.csd.uoc.gr/~komod/FastPD/)")
-	endif()
+    message(SEND_ERROR "DOWNLOAD AND PATCHING OF FastPD IS NOT WORK YET. DISABLE OPTION: 'WITH_FASTPD' ")
+    if(NOT FASTPD_URL)
+        message(  SEND_ERROR "FASTPD_URL is empty, needs a valid download url to be stored in CMakeVariable FASTPD_URL\n(Registration required at http://www.csd.uoc.gr/~komod/FastPD/)")
+    endif()
     add_subdirectory(fastpd)   # patch is not working
+endif()
+
+
+if(WITH_GRANTE)
+    message(SEND_ERROR "DOWNLOAD AND PATCHING OF GRANTE IS NOT YET IMPLEMENTED. DISABLE OPTION: 'WITH_GRANTE' ")
 endif()
