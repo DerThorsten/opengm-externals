@@ -11,42 +11,49 @@ option(WITH_MAXFLOW         "DOWNLOAD AND BUILD MAXFLOW"      ON)
 option(WITH_GCO             "DOWNLOAD AND BUILD GCO"          OFF)
 option(WITH_CONICBUNDLE     "DOWNLOAD AND BUILD CONICBUNDLEO" ON)
 option(WITH_DAOOPT          "DOWNLOAD AND BUILD DAOOPT"       ON)
-option(WITH_LIBDAI          "DOWNLOAD AND BUILD LIBDAI"       ON)
+option(WITH_LIBDAI          "DOWNLOAD AND BUILD LIBDAI"       OFF)
 
 
 if(WITH_QPBO)
     add_subdirectory(qpbo)
 endif()
+
 if(WITH_AD3)
     add_subdirectory(ad3)
 endif()
+
 if(WITH_TRWS)
     add_subdirectory(trws)
 endif()
+
 if(WITH_IBFS)
     add_subdirectory(ibfs) # PATCH DISABLED SO FAR FIXME!!!!
 endif()
+
 if(WITH_MAXFLOW)
     add_subdirectory(maxflow)
 endif()
+
 if(WITH_MRF)
     add_subdirectory(mrf)
 endif()
+
 if(WITH_GCO)
     add_subdirectory(gco) # PATCHH DOES NOT WORK FIXME!!!!
 endif()
+
 if(WITH_CONICBUNDLE)
     add_subdirectory(conicbundle) # INSTALL OF INCLUDES IS ROTTEN!!!!
 endif()
+
 if(WITH_DAOOPT)
     add_subdirectory(daoopt)  # INSTALL OF INCLUDES IS MISSING!!!!
 endif()
+
 if(WITH_LIBDAI)
     find_package(GMP REQUIRED) 
     find_package(GMPXX REQUIRED) 
-    if()
-        add_subdirectory(libdai)  # INSTALL OF INCLUDES IS MISSING!!!!
-    else()
+    add_subdirectory(libdai)  # INSTALL OF INCLUDES IS MISSING!!!!
 endif()
 
 
