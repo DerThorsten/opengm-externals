@@ -63,8 +63,8 @@ install (TARGETS opengm-external-libdai DESTINATION lib/opengm/externals/)
 install (TARGETS opengm-external-libdai-shared DESTINATION lib/opengm/externals/)
 
 
-install(DIRECTORY include
-    DESTINATION include/opengm/externals/libdai
+install(DIRECTORY include/dai
+    DESTINATION include/opengm/externals/
     FILES_MATCHING
     PATTERN "*.h"
     PATTERN ".svn" EXCLUDE
